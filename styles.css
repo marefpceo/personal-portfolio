@@ -1,0 +1,35 @@
+:root {
+  --background-light: #edebd9;
+  --primary-dark: #00848c;
+  --secondary-dark: #037272;
+  --accent-light: #fccf17;
+  --accent-dark: #fec20f;
+  --text-primary: #1c1f4c; 
+}
+
+@font-face {
+  font-family: Archivo;
+  src: url(/source/fonts/Archivo-VariableFont_wdth\,wght.ttf);
+}
+
+@font-face {
+  font-family: Archivo;
+  src: url(/source/fonts/Archivo-Italic-VariableFont_wdth\,wght.ttf);
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Cormorant;
+  src: url(/source/fonts/Cormorant-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: Cormorant;
+  src: url(/source/fonts/Cormorant-Italic-VariableFont_wght.ttf);
+  font-style: italic;
+}
+
+
+* {
+  box-sizing: border-box;
+}

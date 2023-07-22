@@ -1,2 +1,3 @@
-# personal-portfolio
-Personal Portfolio project using responsive design
+# Personal Portfolio
+
+Personal Portfolio project using responsive design. 
