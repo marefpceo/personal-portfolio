@@ -32,4 +32,75 @@
 
 * {
   box-sizing: border-box;
+  font-family: Archivo;
+  margin: 0;
+}
+
+body {
+  background-color: var(--background-light);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--background-light);
+  box-shadow: 0 1px 4px 0px var(--text-primary);
+  padding: 0 10px;
+  width: 100%;
+}
+
+nav a{
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+h1, h2 {
+  font-family: Cormorant;
+  color: var(--text-primary);
+}
+
+#welcome-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  padding-top: 20px;
+}
+
+#about {
+  color: var(--text-primary);
+  padding: 25px 15px;
+}
+
+#about h2{
+  padding-bottom: 25px;
+}
+
+#projects {
+  display: grid;
+  padding: 25px 15px;
+  color: var(--background-light);
+  background-color: var(--secondary-dark);
+}
+
+#projects h2 {
+  color: var(--background-light);
+  padding-bottom: 25px;
+}
+
+.project-tile {
+  margin: 2rem;
+  padding-bottom: 20px;
+}
+
+.tile-bg {
+  background-color: var(--text-primary);
+  transform: rotate(-15deg);
+  box-shadow: 0 0 4px 1px var(--accent-light);
+}
+
+.tile-content {
+  background-color: var(--background-light);
+  transform: rotate(15deg);
 }
