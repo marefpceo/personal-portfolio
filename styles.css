@@ -29,7 +29,6 @@
   font-style: italic;
 }
 
-
 * {
   box-sizing: border-box;
   font-family: Archivo;
@@ -46,13 +45,21 @@ header {
   align-items: center;
   background-color: var(--background-light);
   box-shadow: 0 1px 4px 0px var(--text-primary);
-  padding: 0 10px;
-  width: 100%;
+  position: sticky;
+  top: 0;
+}
+
+nav {
+  align-self: flex-end;
+  padding-bottom: 25px;
+  padding-right: 10px;
+  font-size: 0.93rem;
 }
 
 nav a{
   color: var(--text-primary);
   text-decoration: none;
+  margin-right: 10px;
 }
 
 h1, h2 {
@@ -60,15 +67,47 @@ h1, h2 {
   color: var(--text-primary);
 }
 
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem
+}
+
+/* ************* Welcome Section ************* */
 #welcome-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
   padding-top: 20px;
+  height: 100vh;
+  background: url('/source/images/diamond-bg.svg');
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
-#about {
+#welcome-title {
+  padding-bottom: 2rem;
+}
+
+#welcome-section p {
+  color: var(--text-primary);
+  font-family: Archivo;
+  font-style: italic;
+  font-size: 1.3rem;
+}
+
+#main-photo {
+  max-width: 300px;
+  border-radius: 50%;
+}
+
+/* #about {
   color: var(--text-primary);
   padding: 25px 15px;
 }
@@ -92,6 +131,7 @@ h1, h2 {
 .project-tile {
   margin: 2rem;
   padding-bottom: 20px;
+  max-width: 350px;
 }
 
 .tile-bg {
@@ -103,4 +143,4 @@ h1, h2 {
 .tile-content {
   background-color: var(--background-light);
   transform: rotate(15deg);
-}
+} */

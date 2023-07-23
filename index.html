@@ -3,19 +3,23 @@
 <head>
   <meta charset='UTF-8'>
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-  <link rel="apple-touch-icon" sizes="180x180" href="/source/images/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/source/images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/source/images/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
+  <link rel="apple-touch-icon" sizes="180x180" href="source/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="source/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="source/images/favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
   <link rel='stylesheet' href='styles.css'>
   <title>Lamar Stevens - Front End Developer</title>
+  <script src='main.js' defer></script>
 </head>
 <body>
   <main>
     <header>
-      <img src='/source/images/letter-logo.svg' alt='' id='logo' height='75'>
+      <a href='index.html'>
+        <img src='source/images/letter-logo.svg' alt='' id='logo' height='75'>
+      </a>
+
       <nav id='navbar'>
-        <a href='index.html'>Home</a>
+        <a href='#welcome-section'>Home</a>
         <a href='#about'>About</a>
         <a href='#projects'>My Work</a>
         <a href='#contact'>Contact</a>
@@ -23,9 +27,11 @@
     </header>
 
     <section id='welcome-section'>
-      <h1>Lamar</h1>
-      <p>Front End Developer</p>
-      <img src='/source/images/LinkedIn2.jpg' alt='Lamar Stevens' width='200'>
+      <div id='welcome-title'>
+        <h1>Lamar</h1>
+        <p>Front End Developer</p>
+      </div>
+      <img src='source/images/LinkedIn2.jpg' id='main-photo' alt='Lamar Stevens'>
     </section>
 
     <section id='about'>
@@ -41,13 +47,13 @@
         <div class='tile-bg'>
           <div class='tile-content'>
             <div class='tile-header'>
-              <img src='/source/images/Placeholder_view_vector.svg' alt='' width='200'>
+              <img src='source/images/Placeholder_view_vector.svg' alt='' width='200'>
             </div>
             <div class='tile-body'>
               <h3>Project Name</h3>
               <div class='tile-links'>
-                <img src='/source/images/github.svg' alt='Github project link' width='25'>
-                <img src='/source/images/open-in-new.svg' alt='' width='25'>
+                <img src='source/images/github.svg' alt='Github project link' width='25'>
+                <img src='source/images/open-in-new.svg' alt='' width='25'>
               </div>
               <p>Short description of the project. Just a couple of sentences</p>
             </div>
@@ -59,13 +65,13 @@
         <div class='tile-bg'>
           <div class='tile-content'>
             <div class='tile-header'>
-              <img src='/source/images/Placeholder_view_vector.svg' alt='' width='200'>
+              <img src='source/images/Placeholder_view_vector.svg' alt='' width='200'>
             </div>
             <div class='tile-body'>
               <h3>Project Name</h3>
               <div class='tile-links'>
-                <img src='/source/images/github.svg' alt='Github project link' width='25'>
-                <img src='/source/images/open-in-new.svg' alt='' width='25'>
+                <img src='source/images/github.svg' alt='Github project link' width='25'>
+                <img src='source/images/open-in-new.svg' alt='' width='25'>
               </div>
               <p>Short description of the project. Just a couple of sentences</p>
             </div>
@@ -79,18 +85,18 @@
         <h2>Contact Me</h2>
         <p>Please get in touch if you think our work could be mutually beneficial!</p>
         <p>
-          <img src='/source/images/map-marker.svg' alt='' width='25'>
+          <img src='source/images/map-marker.svg' alt='' width='25'>
           1234 Random Road <br> Random Town, California 12345
         </p>
         <p>
-          <img src='/source/images/phone.svg' alt='' width='25'>
+          <img src='source/images/phone.svg' alt='' width='25'>
           555-555-5555
         </p>
         <p>
-          <img src='/source/images/email.svg' alt='' width='25'>
+          <img src='source/images/email.svg' alt='' width='25'>
           someemail@addy.com
         </p>
-        <img src='/source/images/contact.jpg' alt='' width='300'>
+        <img src='source/images/contact.jpg' alt='' width='300'>
       </section>
     </footer>
   </main>
