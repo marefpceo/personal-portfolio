@@ -39,29 +39,6 @@ body {
   background-color: var(--background-light);
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: var(--background-light);
-  box-shadow: 0 1px 4px 0px var(--text-primary);
-  position: sticky;
-  top: 0;
-}
-
-nav {
-  align-self: flex-end;
-  padding-bottom: 25px;
-  padding-right: 10px;
-  font-size: 0.93rem;
-}
-
-nav a{
-  color: var(--text-primary);
-  text-decoration: none;
-  margin-right: 10px;
-}
-
 h1, h2 {
   font-family: Cormorant;
   color: var(--text-primary);
@@ -79,20 +56,54 @@ h3 {
   font-size: 1.5rem
 }
 
+
+
+/* ************* Header Section ************* */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--background-light);
+  box-shadow: 0 1px 4px 0px var(--text-primary);
+  position: sticky;
+  top: 0;
+  padding: 1rem 0;
+}
+
+#logo {
+  max-width: 70px;
+}
+
+#navbar {
+  align-self: flex-end;
+  margin-bottom: 25px;
+  padding-right: 10px;
+  font-size: 0.90rem;
+}
+
+#navbar a{
+  color: var(--text-primary);
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+
+
 /* ************* Welcome Section ************* */
 #welcome-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 20px;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 20% 80%;
+  padding-top: 1.5rem;
   height: 100vh;
   background: url('/source/images/diamond-bg.svg');
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 20rem;
+  background-position-y: 2rem;
 }
 
 #welcome-title {
-  padding-bottom: 2rem;
+  padding: 2rem 0 2rem 2rem;
 }
 
 #welcome-section p {
@@ -105,6 +116,7 @@ h3 {
 #main-photo {
   max-width: 300px;
   border-radius: 50%;
+  justify-self: center;
 }
 
 /* #about {
