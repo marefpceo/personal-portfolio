@@ -45,18 +45,29 @@ h1, h2 {
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
 
 h2 {
+  font-style: italic;
   font-size: 2rem;
+  padding-bottom: 1rem;
 }
 
 h3 {
-  font-size: 1.5rem
+  font-family: Archivo;
+  font-size: 1.3rem;
+  padding-bottom: 1rem;
 }
 
+p {
+  font-family: Cormorant;
+  font-size: 1.1rem;
+}
 
+.icons {
+  width: 25px;
+}
 
 /* ************* Header Section ************* */
 header {
@@ -67,6 +78,8 @@ header {
   box-shadow: 0 1px 4px 0px var(--text-primary);
   position: sticky;
   top: 0;
+  z-index: 5;
+  width: 100%;
   padding: 1rem 0;
 }
 
@@ -103,12 +116,18 @@ header {
 }
 
 #welcome-title {
-  padding: 2rem 0 2rem 2rem;
+  padding: 2rem;
+}
+
+#welcome-title span {
+  color: var(--text-primary);
+  font-family: Cormorant;
+  font-size: 1.5rem;
 }
 
 #welcome-section p {
   color: var(--text-primary);
-  font-family: Archivo;
+  font-family: Cormorant;
   font-style: italic;
   font-size: 1.3rem;
 }
@@ -119,20 +138,26 @@ header {
   justify-self: center;
 }
 
-/* #about {
+
+
+/* ************* About Section ************* */
+#about {
   color: var(--text-primary);
   padding: 25px 15px;
 }
 
-#about h2{
-  padding-bottom: 25px;
-}
 
+
+/* ************* Projects Section ************* */
 #projects {
-  display: grid;
   padding: 25px 15px;
   color: var(--background-light);
   background-color: var(--secondary-dark);
+}
+
+.tile-collection {
+  display: grid;
+  justify-content: center;
 }
 
 #projects h2 {
@@ -141,9 +166,9 @@ header {
 }
 
 .project-tile {
-  margin: 2rem;
+  margin: 1rem;
   padding-bottom: 20px;
-  max-width: 350px;
+  max-width: 300px;
 }
 
 .tile-bg {
@@ -155,4 +180,48 @@ header {
 .tile-content {
   background-color: var(--background-light);
   transform: rotate(15deg);
-} */
+}
+
+.tile-header {
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+.tile-body {
+  color: var(--text-primary);
+  padding: 1rem;
+  border-top: 1px solid var(--secondary-dark);
+}
+
+.tile-body-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.project-img {
+  max-width: 200px;
+}
+
+
+
+/* ************* Footer Section ************* */
+#contact {
+  color: var(--text-primary);
+  padding: 25px 10px;
+}
+
+.contact-info {
+  padding-bottom: 2rem;
+}
+
+.contact-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 1rem;
+}
+
+#contact-img {
+  width: 100%;
+}
