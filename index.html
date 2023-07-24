@@ -6,8 +6,10 @@
   <link rel="apple-touch-icon" sizes="180x180" href="source/images/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="source/images/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="source/images/favicon-16x16.png">
-  <link rel="manifest" href="site.webmanifest">
   <link rel='stylesheet' href='styles.css'>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+          
   <title>Lamar Stevens - Front End Developer</title>
   <script src='main.js' defer></script>
 </head>
@@ -34,9 +36,27 @@
 
     <section id='about'>
       <h2>About</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime pariatur repellat aut inventore eveniet at veritatis officiis natus labore nostrum ipsa in adipisci molestias ex rem, rerum voluptas illo iure?
-      </p>
+      <div id='about-text'>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime pariatur repellat aut inventore eveniet at veritatis officiis natus labore nostrum ipsa in adipisci molestias ex rem, rerum voluptas illo iure?
+        </p>
+      </div>
+    </section>
+
+    <section id='skills'>
+      <h2>Skills and Tools</h2>
+      
+      <div id='stack-icons'>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt=''/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt=''/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt=''/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt=''/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt=''/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" alt=''/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webpack/webpack-original.svg" alt/>
+      </div>
+
     </section>
 
     <section id='projects'>
@@ -130,25 +150,31 @@
     <footer>
       <section id='contact'>
         <h2>Contact Me</h2>
-        <p>Please get in touch if you think our work could be mutually beneficial!</p>
-        
-        <div class='contact-info'>
-          <div class='contact-group'>
-            <img src='source/images/map-marker.svg' alt='' class='icons'>
-            <p>1234 Random Road <br> Random Town, California 12345</p>
+                
+        <div class='contact-layout'>
+          <div class='info-container'>
+            <p>Please get in touch if you think our work could be mutually beneficial!</p>
+            <div class='contact-info'>
+              <div class='contact-group'>
+                <img src='source/images/map-marker.svg' alt='' class='icons'>
+                <p>1234 Random Road <br> Random Town, California 12345</p>
+              </div>
+            
+              <div class='contact-group'>
+                <img src='source/images/phone.svg' alt='' class='icons'>
+                <p>555-555-5555</p>
+              </div>
+              <div class='contact-group'>
+                <img src='source/images/email.svg' alt='' class='icons'>
+                <p>someemail@addy.com</p>
+              </div>
+            </div>
           </div>
-          
-          <div class='contact-group'>
-            <img src='source/images/phone.svg' alt='' class='icons'>
-            <p>555-555-5555</p>
-          </div>
-          <div class='contact-group'>
-            <img src='source/images/email.svg' alt='' class='icons'>
-            <p>someemail@addy.com</p>
+
+          <div id='contact-img-container'>
+            <img src='source/images/contact.jpg' alt='' id='contact-img'>
           </div>
         </div>
-
-        <img src='source/images/contact.jpg' alt='' id='contact-img'>
       </section>
     </footer>
   </main>
