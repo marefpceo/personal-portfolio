@@ -63,7 +63,12 @@ h3 {
 
 p {
   font-family: Cormorant;
-  font-size: 1.1rem;
+  font-size: 1rem;
+}
+
+.container-div {
+    margin: 0 auto;
+    max-width: 100%;
 }
 
 .icons {
@@ -105,25 +110,11 @@ header {
 
 /* ************* Welcome Section ************* */
 #welcome-section {
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: 20% 80%;
   padding-top: 1.5rem;
   height: 100vh;
   background: url('./source/images/diamond-bg.svg');
   background-repeat: no-repeat;
-  background-size: 20rem;
-  background-position-y: 2rem;
-}
-
-#welcome-title {
-  padding: 1rem;
-}
-
-#welcome-title span {
-  color: var(--text-primary);
-  font-family: Cormorant;
-  font-size: 1.5rem;
+  background-size: 100%;
 }
 
 #welcome-section p {
@@ -131,6 +122,17 @@ header {
   font-family: Cormorant;
   font-style: italic;
   font-size: 1.3rem;
+}
+
+#welcome-container {
+  display: grid;
+  grid-template-rows: 40% 60%;
+  margin: 0 auto;
+  max-width: 80%;
+}
+
+#welcome-title {
+  padding: 1rem;
 }
 
 #main-photo {
@@ -153,6 +155,13 @@ header {
   padding: 25px 15px;
 }
 
+#stack-icons {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 4rem;
+}
+
 #stack-icons img {
   width: 60px;
 }
@@ -167,14 +176,14 @@ header {
   overflow: hidden;
 }
 
-.tile-collection {
-  display: grid;
-  justify-content: center;
-}
-
 #projects h2 {
   color: var(--background-light);
   padding-bottom: 25px;
+}
+
+.tile-collection {
+  display: grid;
+  justify-content: center;
 }
 
 .project-tile {
@@ -247,6 +256,10 @@ header {
 /* ************* Tablet Media Query ************* */
 /* ********************************************** */
 @media only screen and (min-width: 481px) and (max-width: 768px) { 
+  h3 {
+    font-size: 1.1rem;
+  }
+
   #navbar {
     font-size: 1.2rem;
   }
@@ -260,11 +273,14 @@ header {
     grid-template-rows: repeat(5, 1fr);
     align-items: start;
     padding-top: 3rem;
-    background: url('./source/images/diamond-bg.svg'), url('./source/images/wave-bg.svg');
-    background-repeat: no-repeat, no-repeat;
-    background-size: 20rem, 15rem;
-    background-position-y: 10rem, 0;
-    background-position-x: 0, right;
+    background-size: auto;
+  }
+  #welcome-section p{
+    font-size: 1.4rem;
+  }
+
+  #welcome-container {
+    max-width: 95%;
   }
 
   #welcome-title {
@@ -286,6 +302,100 @@ header {
     width: 80%;
   }
 
+  .tile-links > .icons {
+    width: 20px;
+  }
+
+  .project-img {
+    max-width: 175px;
+  }
+
+  #contact > .container-div {
+    max-width: 90%;
+  }
+
+  .contact-layout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    gap: 2rem;
+  }
+
+  .info-container {
+    grid-column-start: 2;
+    grid-row-start: 1;
+  }
+
+  #contact-img-container {
+    grid-column-start: 1;
+    grid-row-start: 1;
+  }
+
+  #contact-img {
+    max-width: 300px;
+  }
+}
+
+
+
+/* ************* Small screens & Laptops Media Query ************* */
+/* *************************************************************** */
+@media only screen and (min-width: 769px) and (max-width: 1024px){
+  .container-div {
+    max-width: 90%;
+  }
+
+  h1 {
+    font-size: 3.2rem;
+  }
+
+  #navbar {
+    font-size: 1.2rem;
+  }
+
+  #navbar a {
+    margin-right: 1.2rem;
+  }
+
+  #welcome-section {
+    padding-top: 3rem;
+    background-size: auto;
+  }
+
+  #welcome-section p {
+    font-size: 1.6rem;
+  }
+  
+  #welcome-title {
+    grid-row-start: 2;
+    justify-self: center;   
+    align-self: center;
+  }
+
+  #main-photo {
+    grid-row-start: 2;
+    grid-column: 3;
+  }
+
+  .tile-collection {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 10%;
+    justify-items: center;
+  }
+
+  .project-tile {
+    max-width: 350px;
+    margin: 5rem 0;
+  }
+
+  .project-img {
+    max-width: 250px;
+  }
+
+  #contact p {
+    font-size: 1.2rem;
+  }
+
   .contact-layout {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -302,38 +412,91 @@ header {
     grid-column-start: 1;
     grid-row-start: 1;
   }
+
+  #contact-img {
+    max-width: 400px;
+  }
 }
 
 
 
-/* ************* Desktop Media Query ************* */
-/* ********************************************** */
-@media only screen and (min-width: 769px) and (max-width: 1200px) {
+/* ************* Desktops & Large screens Media Query ************* */
+/* **************************************************************** */
+@media only screen and (min-width: 1025px) {
+  .container-div {
+    max-width: 70%;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+  }
+
   #navbar {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 
   #navbar a {
-    margin-right: 1.2rem;
+    margin-right: 1.4rem;
   }
 
   #welcome-section {
-    grid-template-columns: 2fr 1fr 3fr;
-    grid-template-rows: 20% 20% 60%;
     padding-top: 3rem;
-    background: url('./source/images/shape-bg-plain.svg');
-    background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: auto;
   }
-  
+
+  #welcome-section p {
+    font-size: 2rem;
+  }
+
+  #welcome-container {
+    grid-template-rows: 20% 80%;
+    margin: 0 auto;
+    max-width: 70%;
+  }
+
   #welcome-title {
     grid-row-start: 2;
     justify-self: center;   
     align-self: center;
   }
-
+  
   #main-photo {
+    grid-row-start: 2;
+    grid-column: 2;
+    max-width: 300px;
+  }
+
+  .tile-collection {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+
+  .project-tile {
+    max-width: 350px;
+  }
+
+  .contact-layout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    gap: 3rem;
+  }
+
+  .info-container {
+    grid-column-start: 2;
     grid-row-start: 1;
-    grid-column: 3;
+  }
+
+  #contact-img-container {
+    grid-column-start: 1;
+    grid-row-start: 1;
+  }
+
+  #contact-img {
+    max-width: 400px;
   }
 }
