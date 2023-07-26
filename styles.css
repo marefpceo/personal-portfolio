@@ -76,17 +76,27 @@ p {
 }
 
 /* ************* Header Section ************* */
+
+@keyframes header-load {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 header {
-  display: flex;
+  display: none;
   justify-content: space-between;
   align-items: center;
   background-color: var(--background-light);
-  box-shadow: 0 1px 4px 0px var(--text-primary);
   position: sticky;
   top: 0;
   z-index: 5;
   width: 100%;
   padding: 1rem 0;
+  animation: header-load 1s;
 }
 
 #logo {
@@ -113,6 +123,25 @@ header {
 }
 
 /* ************* Welcome Section ************* */
+@keyframes welcome-collapse {
+  from {
+    height: 100vh;
+  }
+
+  to {
+    height: 75vh;
+  }
+}
+
+@keyframes welcome-expand {
+  from {
+    height: 75vh;
+  }
+  
+  to {
+    height: 100vh;
+  }
+}
 #welcome-section {
   padding-top: 1.5rem;
   height: 100vh;
@@ -139,6 +168,7 @@ header {
   padding: 1rem;
 }
 
+
 #main-photo {
   max-width: 250px;
   border-radius: 50%;
@@ -151,6 +181,7 @@ header {
 #about {
   color: var(--text-primary);
   padding: 25px 15px;
+  margin: 4rem 0;
 }
 
 
@@ -164,6 +195,7 @@ header {
   justify-items: center;
   grid-template-columns: repeat(4, 1fr);
   row-gap: 4rem;
+  margin: 2rem 0;
 }
 
 #stack-icons img {
@@ -188,6 +220,8 @@ header {
 .tile-collection {
   display: grid;
   justify-content: center;
+  row-gap: 4rem;
+  margin-bottom: 4rem;
 }
 
 .project-tile {
@@ -392,9 +426,69 @@ header {
     align-self: center;
   }
 
+  @keyframes greeting-slide {
+    from {
+      opacity: 0;
+      transform: translate(-200%, -800%);
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+  #greeting {
+    animation: greeting-slide 2s;
+  }
+  
+  @keyframes name-scale {
+    from {
+      opacity: 0;
+      transform: scale(5);
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+  #name  {
+    animation: name-scale 7s;
+  }
+  
+  @keyframes job-title-slide {
+    from {
+      opacity: 0;
+      transform: translate(-200%, 800%);
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+  
+  #job-title {
+    animation: job-title-slide 5s;
+  }
+  
+  @keyframes photo-slide {
+    from {
+      /* margin-right: -200%; */
+      opacity: 0;
+    }
+    60% {
+      opacity: 0;
+    }
+    to {
+      margin: '';
+      opacity: 1;
+    }
+  }
+
   #main-photo {
     grid-row-start: 2;
     grid-column: 3;
+    animation-name: photo-slide;
+    animation-duration: 8s;
+    animation-timing-function: ease;
   }
 
   .tile-collection {
@@ -492,10 +586,74 @@ header {
     align-self: center;
   }
   
+  @keyframes greeting-slide {
+    from {
+      opacity: 0;
+      transform: translate(-200%, -800%);
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+  #greeting {
+    animation: greeting-slide 2s;
+  }
+  
+  @keyframes name-scale {
+    from {
+      opacity: 0;
+      transform: scale(100);
+    }
+  
+    40% {
+      transform: scale(4);
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+  #name  {
+    animation: name-scale 7s;
+  }
+  
+  @keyframes job-title-slide {
+    from {
+      opacity: 0;
+      transform: translate(-200%, 800%);
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+  
+  #job-title {
+    animation: job-title-slide 5s;
+  }
+  
+  @keyframes photo-slide {
+    from {
+      /* margin-right: -200%; */
+      opacity: 0;
+    }
+    60% {
+      opacity: 0;
+    }
+    to {
+      margin: '';
+      opacity: 1;
+    }
+  }
+
   #main-photo {
     grid-row-start: 2;
     grid-column: 2;
     max-width: 300px;
+    animation-name: photo-slide;
+    animation-duration: 8s;
+    animation-timing-function: ease;
   }
 
   .tile-collection {
