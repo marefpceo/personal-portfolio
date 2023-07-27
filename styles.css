@@ -76,18 +76,8 @@ p {
 }
 
 /* ************* Header Section ************* */
-
-@keyframes header-load {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 header {
-  display: none;
+  display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: var(--background-light);
@@ -96,7 +86,9 @@ header {
   z-index: 5;
   width: 100%;
   padding: 1rem 0;
-  animation: header-load 1s;
+  opacity: 0;
+  box-shadow: 0 1px 4px 0px var(--text-primary);
+  transition: opacity 0.3s linear;
 }
 
 #logo {
@@ -123,31 +115,13 @@ header {
 }
 
 /* ************* Welcome Section ************* */
-@keyframes welcome-collapse {
-  from {
-    height: 100vh;
-  }
-
-  to {
-    height: 75vh;
-  }
-}
-
-@keyframes welcome-expand {
-  from {
-    height: 75vh;
-  }
-  
-  to {
-    height: 100vh;
-  }
-}
 #welcome-section {
   padding-top: 1.5rem;
   height: 100vh;
   background: url('./source/images/diamond-bg.svg');
   background-repeat: no-repeat;
   background-size: 100%;
+  transition: height 2s ease;
 }
 
 #welcome-section p {
@@ -426,69 +400,25 @@ header {
     align-self: center;
   }
 
-  @keyframes greeting-slide {
-    from {
-      opacity: 0;
-      transform: translate(-200%, -800%);
-    }
-  
-    to {
-      opacity: 1;
-    }
-  }
   #greeting {
-    animation: greeting-slide 2s;
+    opacity: 0;
+    transform: translate(-200%, -800%);
   }
   
-  @keyframes name-scale {
-    from {
-      opacity: 0;
-      transform: scale(5);
-    }
-
-    to {
-      opacity: 1;
-    }
-  }
   #name  {
-    animation: name-scale 7s;
-  }
-  
-  @keyframes job-title-slide {
-    from {
-      opacity: 0;
-      transform: translate(-200%, 800%);
-    }
-  
-    to {
-      opacity: 1;
-    }
+    opacity: 0;
+    transform: scale(5) translate(100%, 100%);
   }
   
   #job-title {
-    animation: job-title-slide 5s;
-  }
-  
-  @keyframes photo-slide {
-    from {
-      /* margin-right: -200%; */
-      opacity: 0;
-    }
-    60% {
-      opacity: 0;
-    }
-    to {
-      margin: '';
-      opacity: 1;
-    }
+    opacity: 0;
+    transform: translate(-200%, 800%);
   }
 
   #main-photo {
     grid-row-start: 2;
     grid-column: 3;
-    animation-name: photo-slide;
-    animation-duration: 8s;
-    animation-timing-function: ease;
+    opacity: 0;
   }
 
   .tile-collection {
@@ -586,74 +516,26 @@ header {
     align-self: center;
   }
   
-  @keyframes greeting-slide {
-    from {
-      opacity: 0;
-      transform: translate(-200%, -800%);
-    }
-  
-    to {
-      opacity: 1;
-    }
-  }
   #greeting {
-    animation: greeting-slide 2s;
+    opacity: 0;
+    transform: translate(-200%, -800%);
   }
   
-  @keyframes name-scale {
-    from {
-      opacity: 0;
-      transform: scale(100);
-    }
-  
-    40% {
-      transform: scale(4);
-    }
-  
-    to {
-      opacity: 1;
-    }
-  }
   #name  {
-    animation: name-scale 7s;
-  }
-  
-  @keyframes job-title-slide {
-    from {
-      opacity: 0;
-      transform: translate(-200%, 800%);
-    }
-  
-    to {
-      opacity: 1;
-    }
+    opacity: 0;
+    transform: scale(5) translate(100%, 100%);
   }
   
   #job-title {
-    animation: job-title-slide 5s;
-  }
-  
-  @keyframes photo-slide {
-    from {
-      /* margin-right: -200%; */
-      opacity: 0;
-    }
-    60% {
-      opacity: 0;
-    }
-    to {
-      margin: '';
-      opacity: 1;
-    }
+    opacity: 0;
+    transform: translate(-200%, 700%);
   }
 
   #main-photo {
     grid-row-start: 2;
     grid-column: 2;
     max-width: 300px;
-    animation-name: photo-slide;
-    animation-duration: 8s;
-    animation-timing-function: ease;
+    opacity: 0;
   }
 
   .tile-collection {
