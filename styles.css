@@ -1,18 +1,9 @@
 :root {
-  /* --background: #edebd9;
-  --primary-dark: #00848c;
-  --secondary-dark: #037272;
-  --accent-light: #fccf17;
-  --accent-dark: #fec20f;
-  --primary-dark: #1c1f4c;  */
-
-
   --background: #f4e9cd;
   --primary-dark: #031926;
   --secondary-dark: #468189;
   --accent-light: #9dbebb;
   --accent-dark: #77aca2;
-  /* --primary-dark: #031926;  */
 }
 
 @font-face {
@@ -223,12 +214,21 @@ header {
 .project-tile {
   margin: 1rem;
   max-width: 250px;
+  transform: scale(1);
+}
+
+.project-tile:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
 }
 
 .tile-bg {
   background-color: var(--primary-dark);
   transform: rotate(-15deg);
-  box-shadow: 0 0 4px 1px var(--background);
+}
+
+.tile-bg:hover {
+  box-shadow: 0 0 15px 10px var(--background);
 }
 
 .tile-content {
@@ -252,8 +252,34 @@ header {
   justify-content: space-between;
 }
 
+.project-link .icons:hover {
+  transform: scale(1.3);
+  transition: transform 0.2s ease;
+}
+
 .project-img {
   width: 100%;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+}
+
+#more-projects {
+  width: 170px;
+  height: 50px;
+  border: 1px solid var(--primary-dark);
+  border-radius: 2px;
+  background-color: var(--accent-light);
+  font-size: 1.4rem;
+}
+
+#more-projects:hover {
+  background-color: var(--primary-dark);
+  color: var(--background);
+  box-shadow: 0 0 10px 5px var(--background);
+  transition: all 0.5s ease;
 }
 
 
