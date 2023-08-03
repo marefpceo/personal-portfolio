@@ -4,14 +4,19 @@ const greeting = document.getElementById('greeting');
 const displayName = document.getElementById('name');
 const jobTitle = document.getElementById('job-title');
 const mainPhoto = document.getElementById('main-photo');
+const scrollDown = document.getElementById('scroll-down');
 
 function displayHeader() {
-  if (window.scrollY > 100) {
+  if (window.scrollY > 35) {
     header.style.opacity = 1;
     welcomeSection.style.height = '75vh';
+    scrollDown.style.opacity = 0;
+    scrollDown.style.transition = 'opacity 1s ease';
   } else {
     header.style.opacity = 0;
     welcomeSection.style.height = '100vh';
+    scrollDown.style.opacity = 1;
+    scrollDown.style.transition = 'opacity 1s ease';
   }
 }
 
@@ -27,6 +32,8 @@ function welcomeTitleLoad() {
   jobTitle.style.transition = 'opacity 5s ease-out, transform 5s ease-out';  
   mainPhoto.style.opacity = 1;
   mainPhoto.style.transition = 'opacity 4s ease 4s';
+  scrollDown.style.opacity = 1;
+  scrollDown.style.transition = 'opacity 1s ease 5s';
 }
 
 window.addEventListener('load', () => {
