@@ -1,10 +1,18 @@
 :root {
-  --background-light: #edebd9;
+  /* --background: #edebd9;
   --primary-dark: #00848c;
   --secondary-dark: #037272;
   --accent-light: #fccf17;
   --accent-dark: #fec20f;
-  --text-primary: #1c1f4c; 
+  --primary-dark: #1c1f4c;  */
+
+
+  --background: #f4e9cd;
+  --primary-dark: #031926;
+  --secondary-dark: #468189;
+  --accent-light: #9dbebb;
+  --accent-dark: #77aca2;
+  /* --primary-dark: #031926;  */
 }
 
 @font-face {
@@ -36,13 +44,13 @@
 }
 
 body {
-  background-color: var(--background-light);
+  background-color: var(--background);
   width: 100%;
 }
 
 h1, h2 {
   font-family: Cormorant;
-  color: var(--text-primary);
+  color: var(--primary-dark);
 }
 
 h1 {
@@ -80,14 +88,14 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--background-light);
+  background-color: var(--background);
   position: sticky;
   top: 0;
   z-index: 5;
   width: 100%;
   padding: 1rem 0;
   opacity: 0;
-  box-shadow: 0 1px 4px 0px var(--text-primary);
+  box-shadow: 0 1px 4px 0px var(--primary-dark);
   transition: opacity 0.2s linear;
 }
 
@@ -103,15 +111,15 @@ header {
 }
 
 #navbar a{
-  color: var(--text-primary);
+  color: var(--primary-dark);
   text-decoration: none;
   margin-right: 5px;
   border-radius: 2px;
 }
 
 #navbar a:hover {
-  background-color: var(--text-primary);
-  color: var(--accent-light);
+  background-color: var(--primary-dark);
+  color: var(--background);
 }
 
 /* ************* Welcome Section ************* */
@@ -125,7 +133,7 @@ header {
 }
 
 #welcome-section p {
-  color: var(--text-primary);
+  color: var(--primary-dark);
   font-family: Cormorant;
   font-style: italic;
   font-size: 1.3rem;
@@ -153,13 +161,13 @@ header {
 
 /* ************* About Section ************* */
 #about {
-  color: var(--background-light);
-  background-color: var(--text-primary);
+  color: var(--primary-dark);
+  background-color: var(--accent-dark);
   padding: 25px 15px;
 }
 
 #about h2 {
-  color: var(--background-light);
+  color: var(--primary-dark);
   text-align: center;
 }
 
@@ -168,10 +176,13 @@ header {
 /* ************* Skills Section ************* */
 #skills {
   padding: 25px 15px;
+  background-color: var(--background);
+  color: var(--primary-dark);
 }
 
 #skills h2 {
   text-align: center;
+  color: var(--primary-dark);
 }
 
 #stack-icons {
@@ -191,13 +202,13 @@ header {
 /* ************* Projects Section ************* */
 #projects {
   padding: 25px 15px;
-  color: var(--background-light);
-  background-color: var(--secondary-dark);
+  color: var(--primary-dark);
+  background-color: var(--accent-dark);
   overflow: hidden;
 }
 
 #projects h2 {
-  color: var(--background-light);
+  color: var(--primary-dark);
   padding-bottom: 25px;
   text-align: center;
 }
@@ -211,28 +222,28 @@ header {
 
 .project-tile {
   margin: 1rem;
-  padding-bottom: 20px;
   max-width: 250px;
 }
 
 .tile-bg {
-  background-color: var(--text-primary);
+  background-color: var(--primary-dark);
   transform: rotate(-15deg);
-  box-shadow: 0 0 4px 1px var(--accent-light);
+  box-shadow: 0 0 4px 1px var(--background);
 }
 
 .tile-content {
-  background-color: var(--background-light);
+  background-color: var(--background);
   transform: rotate(15deg);
 }
 
 .tile-header {
   display: flex;
   justify-content: center;
+  border-bottom: 1px solid var(--accent-dark);
 }
 
 .tile-body {
-  color: var(--text-primary);
+  color: var(--primary-dark);
   padding: 1rem;
 }
 
@@ -249,7 +260,7 @@ header {
 
 /* ************* Footer Section ************* */
 #contact {
-  color: var(--text-primary);
+  color: var(--primary-dark);
   padding: 25px 10px;
 }
 
@@ -293,8 +304,8 @@ header {
   }
 
   #navbar a:hover {
-    background-color: var(--text-primary);
-    color: var(--accent-light);
+    background-color: var(--primary-dark);
+    color: var(--background);
   }
 
   #welcome-section {
@@ -390,8 +401,8 @@ header {
   }
 
   #navbar a:hover {
-    background-color: var(--text-primary);
-    color: var(--accent-light);
+    background-color: var(--primary-dark);
+    color: var(--background);
   }
 
   #welcome-section {
@@ -500,8 +511,8 @@ header {
   }
 
   #navbar a:hover {
-    background-color: var(--text-primary);
-    color: var(--accent-light);
+    background-color: var(--primary-dark);
+    color: var(--background);
   }
 
   #welcome-section {
